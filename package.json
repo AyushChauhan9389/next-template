@@ -4,23 +4,40 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "turbo": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "introspect": "drizzle-kit introspect:pg --config=drizzle.config.ts",
+    "generate": "drizzle-kit generate --config=drizzle.config.ts",
+    "migrate": "drizzle-kit migrate --config=drizzle.config.ts",
+    "rollback": "drizzle-kit rollback --config=drizzle.config.ts",
+    "push": "drizzle-kit push",
+    "studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.2.8",
+    "@neondatabase/serverless": "^0.9.4",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "drizzle-orm": "^0.32.1",
+    "lucide-react": "^0.416.0",
+    "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.5"
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "^0.23.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "typescript": "^5"
   }
 }
